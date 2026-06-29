@@ -1,0 +1,146 @@
+:root {
+  /* 品牌色 */
+  --color-brand-primary: #FF820A;
+  --color-brand-primary-hover: #E0700A;
+  --color-brand-secondary: #3B82C4;
+
+  /* 深色模式 */
+  --color-dark-bg-base: #0D1018;
+  --color-dark-bg-surface: #141923;
+  --color-dark-bg-elevated: #1C2333;
+  --color-dark-text-display: #FFFFFF;
+  --color-dark-text-primary: #EDE9E4;
+  --color-dark-text-secondary: #9CA3AF;
+  --color-dark-border-default: #252D3D;
+  --color-dark-border-subtle: #1A2030;
+
+  /* 浅色模式 */
+  --color-light-bg-base: #F7F5F2;
+  --color-light-bg-surface: #FFFFFF;
+  --color-light-bg-elevated: #F0EDE8;
+  --color-light-text-primary: #161A22;
+  --color-light-text-secondary: #4B5563;
+  --color-light-text-tertiary: #9CA3AF;
+  --color-light-border-default: #E5E1DA;
+  --color-light-border-subtle: #EDE9E4;
+
+  /* 通用 */
+  --color-text-on-primary: #0D1018;
+  --color-border-focus: #FF820A;
+
+  /* 状态色 */
+  --color-status-success: #34C78A;
+  --color-status-warning: #F0A030;
+  --color-status-error: #E05555;
+  --color-status-info: #4A9EEF;
+
+  /* 字体 */
+  --font-sans-zh: 'Source Han Sans SC', 'PingFang SC', sans-serif;
+  --font-sans-en: 'Inter', -apple-system, sans-serif;
+
+  /* 字号 */
+  --font-size-display: 56px;
+  --font-size-heading: 32px;
+  --font-size-body: 17px;
+  --font-size-caption: 13px;
+
+  /* 字重 */
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+
+  /* 行高 */
+  --line-height-display: 1.1;
+  --line-height-heading: 1.2;
+  --line-height-body-zh: 1.75;
+  --line-height-body-en: 1.6;
+
+  /* 间距 */
+  --space-0-5: 4px;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-12: 96px;
+  --space-16: 128px;
+
+  /* 阴影 */
+  --shadow-sm: 0 1px 3px rgba(13,16,24,.08), 0 1px 2px rgba(13,16,24,.04);
+  --shadow-md: 0 4px 12px rgba(13,16,24,.08), 0 2px 4px rgba(13,16,24,.04);
+  --shadow-lg: 0 12px 32px rgba(13,16,24,.10), 0 4px 8px rgba(13,16,24,.06);
+
+  /* 图标 */
+  --icon-stroke-width: 1.5px;
+  --icon-size-sm: 16px;
+  --icon-size-md: 20px;
+  --icon-size-lg: 24px;
+
+  /* 布局 */
+  --layout-max-width: 1200px;
+  --layout-columns: 12;
+  --layout-gutter: 24px;
+  --layout-margin-desktop: 64px;
+
+  /* 动效 */
+  --motion-duration-fast: 150ms;
+  --motion-duration-base: 300ms;
+  --motion-duration-slow: 500ms;
+  --motion-easing-out: cubic-bezier(0.0, 0.0, 0.2, 1);
+  --motion-easing-default: ease;
+}
+
+/* Token 展示样式 */
+.token-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  margin: 24px 0;
+}
+
+.token-card {
+  border: 1px solid var(--color-light-border-default);
+  border-radius: 8px;
+  padding: 16px;
+  background: var(--color-light-bg-surface);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--motion-duration-fast) var(--motion-easing-default);
+}
+
+.token-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.token-color-preview {
+  width: 100%;
+  height: 60px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  border: 1px solid var(--color-light-border-default);
+}
+
+.token-name {
+  font-family: var(--font-sans-zh);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-light-text-primary);
+  margin: 12px 0 4px 0;
+}
+
+.token-value {
+  font-family: monospace;
+  font-size: 12px;
+  color: var(--color-light-text-secondary);
+  word-break: break-all;
+  padding: 8px;
+  background: var(--color-light-bg-base);
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.token-usage {
+  font-size: var(--font-size-caption);
+  color: var(--color-light-text-tertiary);
+  margin-top: 8px;
+}
