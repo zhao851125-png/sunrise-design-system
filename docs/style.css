@@ -1,0 +1,210 @@
+:root {
+  /* ── 品牌色 ── */
+  --brand-primary: #FF820A;
+  --brand-hover: #E0700A;
+  --brand-active: #C05E08;
+  --brand-primary-light: #FFB060;
+  --brand-primary-subtle: #FFF3E8;
+  --brand-primary-dark: #A85505;
+
+  /* ── 深色模式背景 ── */
+  --dark-bg-base: #111111;
+  --dark-bg-surface: #181818;
+  --dark-bg-elevated: #222222;
+
+  /* ── 深色模式文字 ── */
+  --dark-text-display: #FFFFFF;
+  --dark-text-primary: #EDE9E4;
+  --dark-text-secondary: #9B9B9B;
+  --dark-text-tertiary: #555555;
+
+  /* ── 深色模式边框 ── */
+  --dark-border-default: #2D2D2D;
+  --dark-border-subtle: #1C1C1C;
+  --dark-border-focus: #FF820A;
+
+  /* ── 浅色模式背景 ── */
+  --light-bg-base: #F7F5F2;
+  --light-bg-surface: #FFFFFF;
+  --light-bg-elevated: #F0EDE8;
+  --light-bg-disabled: #F0EDE8;
+
+  /* ── 浅色模式文字 ── */
+  --light-text-primary: #181818;
+  --light-text-secondary: #505050;
+  --light-text-tertiary: #9B9B9B;
+  --light-text-disabled: #BBBBBB;
+
+  /* ── 浅色模式边框 ── */
+  --light-border-default: #E5E1DA;
+  --light-border-subtle: #EDE9E4;
+  --light-border-error: #E05555;
+
+  /* ── 状态色 ── */
+  --status-success: #34C78A;
+  --status-success-subtle: #E6F7F0;
+  --status-success-dark: #1A4A35;
+  --status-warning: #F0A030;
+  --status-warning-subtle: #FEF3E2;
+  --status-warning-dark: #4A3010;
+  --status-error: #E05555;
+  --status-error-subtle: #FDECEC;
+  --status-error-dark: #4A1515;
+  --status-info: #4A9EEF;
+  --status-info-subtle: #E8F1FD;
+  --status-info-dark: #0F2C48;
+
+  /* ── Hero 专属 ── */
+  --hero-bg: #1A1A1A;
+  --flow-start: #FF820A;
+  --flow-mid: #FF9A3C;
+  --flow-end: #EDE9E4;
+  --node-texture: #181818;
+  --hero-cta-border: #626670;
+
+  /* ── 链接色 ── */
+  --link-default: #FF820A;
+  --link-hover: #E0700A;
+  --link-visited: #A85505;
+
+  /* ── 其他 ── */
+  --text-on-primary: #111111;
+  --overlay-bg: rgba(0, 0, 0, 0.52);
+
+  /* ── 禁用态 ── */
+  --dark-bg-disabled: #1E1E1E;
+
+  /* ── 圆角 ── */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* ── 字体家族 ── */
+  --font-zh: 'AlibabaPuHuiTi', 'PingFang SC', 'Noto Sans SC', sans-serif;
+  --font-en: 'Inter', -apple-system, sans-serif;
+
+  /* ── 字号 ── */
+  --font-size-display: 56px;
+  --font-size-display-mobile: 36px;
+  --font-size-heading: 32px;
+  --font-size-heading-mobile: 24px;
+  --font-size-body: 16px;
+  --font-size-body-mobile: 16px;
+  --font-size-desc: 14px;
+  --font-size-desc-mobile: 14px;
+  --font-size-label: 12px;
+  --font-size-caption: 12px;
+  --font-size-caption-mobile: 12px;
+
+  /* ── 字重 ── */
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-regular: 400;
+
+  /* ── 行高 ── */
+  --line-height-display: 1.1;
+  --line-height-heading: 1.2;
+  --line-height-body-zh: 1.75;
+  --line-height-body-en: 1.6;
+  --line-height-caption: 1.5;
+
+  /* ── 字间距 ── */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0em;
+  --tracking-zh-heading: 0.02em;
+  --tracking-wide: 0.06em;
+
+  /* ── 间距 ── */
+  --space-0-5: 4px;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-12: 96px;
+  --space-16: 128px;
+
+  /* ── 响应式断点 ── */
+  --bp-sm: 375px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1440px;
+  --bp-2xl: 1920px;
+
+  /* ── 阴影 ── */
+  --shadow-sm: 0 1px 3px rgba(17,17,17,.08), 0 1px 2px rgba(17,17,17,.04);
+  --shadow-md: 0 4px 12px rgba(17,17,17,.08), 0 2px 4px rgba(17,17,17,.04);
+  --shadow-lg: 0 12px 32px rgba(17,17,17,.10), 0 4px 8px rgba(17,17,17,.06);
+  --shadow-brand: 0 0 0 3px rgba(255,130,10,0.20), 0 0 12px rgba(255,130,10,0.12);
+  --shadow-dark-sm: 0 1px 4px rgba(0,0,0,0.40), 0 0 0 1px rgba(255,255,255,0.04);
+  --shadow-dark-md: 0 4px 16px rgba(0,0,0,0.50), 0 0 0 1px rgba(255,255,255,0.06);
+
+  /* ── 图标 ── */
+  --icon-stroke-width: 1.5px;
+  --icon-size-sm: 16px;
+  --icon-size-md: 20px;
+  --icon-size-lg: 24px;
+
+  /* ── 动效 ── */
+  --motion-duration-fast: 150ms;
+  --motion-duration-base: 300ms;
+  --motion-duration-slow: 500ms;
+  --motion-duration-flow: 25s;
+  --motion-duration-platform: 10s;
+  --motion-easing-out: cubic-bezier(0,0,0.2,1);
+  --motion-easing-in: cubic-bezier(0.4,0,1,1);
+  --motion-easing-default: ease;
+  --motion-scale-platform: scale(1.01);
+
+  /* ── 布局 ── */
+  --layout-max-width: 1200px;
+  --layout-margin-desktop: 64px;
+  --layout-margin-tablet: 32px;
+  --layout-margin-mobile: 16px;
+  --layout-columns: 12;
+  --layout-gutter: 24px;
+  --layout-columns-tablet: 8;
+  --layout-gutter-tablet: 20px;
+  --layout-columns-mobile: 4;
+  --layout-gutter-mobile: 16px;
+
+  /* ── Hero 布局 ── */
+  --hero-text-width: 40%;
+  --hero-visual-width: 60%;
+  --flow-width-min: 8px;
+  --flow-width-max: 16px;
+
+  /* ── 边框 ── */
+  --border-width-default: 1px;
+  --border-width-thick: 2px;
+
+  /* ── 透明度 ── */
+  --opacity-disabled: 0.4;
+  --opacity-hover: 0.08;
+  --opacity-pressed: 0.12;
+
+  /* ── Z-index 层叠体系 ── */
+  --z-base: 0;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+
+  /* ── Touch Target ── */
+  --touch-target-min: 44px;
+
+  /* ── Safe Area ── */
+  --safe-area-top: env(safe-area-inset-top);
+  --safe-area-bottom: env(safe-area-inset-bottom);
+
+  /* ── 栅格（移动端） ── */
+  --grid-columns-mobile: 4;
+  --grid-gutter-mobile: 16px;
+}
