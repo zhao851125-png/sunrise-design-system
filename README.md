@@ -14,10 +14,10 @@
 
 ## 🎨 包含内容
 
-- 🎨 **颜色 Token** — 品牌色、深浅色模式、状态色
+- 🎨 **颜色 Token** — 品牌色、深浅色模式、状态色、Hero 专属色
 - ✍️ **字体 Token** — 字体家族、字号、字重、行高  
 - 📏 **间距 Token** — 完整的间距系统（8px 基础）
-- ✨ **其他 Token** — 阴影、图标、布局、动效
+- ✨ **其他 Token** — 阴影、图标、布局、动效、Hero 专属规范
 
 ---
 
@@ -47,6 +47,7 @@
 
 ## 📝 更新历史
 
+- **v1.1** (2026.06.30) - 新增 Hero 专属 Token（颜色、动效、布局）
 - **v1.0** (2026.06.30) - 初始版本，完整的 Token 定义
 
 ---
@@ -97,6 +98,15 @@
 | `--color-status-warning` | `#F0A030` | 性能告警、容量预警 |
 | `--color-status-error` | `#E05555` | 错误状态 |
 | `--color-status-info` | `#4A9EEF` | 提示说明、文档链接 |
+
+#### Hero 专属色（新增）
+
+| Token | 值 | 使用场景 |
+|---|---|---|
+| `--color-hero-bg` | `#1A1A1A` | Hero 区主背景，深灰·工程感 |
+| `--color-flow-mid` | `#FF9A3C` | Flow 渐变中间色，橙→棕（传导中） |
+| `--color-node-texture` | `#161A22` | Node 纹理色，Platform 底面 |
+| `--color-hero-cta-border` | `#626670` | 次级 CTA 描边，中性灰·深背景可见 |
 
 ---
 
@@ -171,6 +181,17 @@
 | `--layout-gutter` | 24px |
 | `--layout-margin-desktop` | 64px |
 
+#### Hero 专属布局（新增）
+
+| Token | 值 | 说明 |
+|---|---|---|
+| `--hero-text-width` | 40% | 左侧文案区宽度占比 |
+| `--hero-visual-width` | 60% | 右侧纯视觉区宽度占比（零文字） |
+| `--flow-width-min` | 8px | Flow 线条粗细最小值 |
+| `--flow-width-max` | 16px | Flow 线条粗细最大值 |
+
+---
+
 #### 动效
 
 | Token | 值 | 使用场景 |
@@ -179,6 +200,14 @@
 | `--motion-duration-base` | 300ms | 淡入、展开 |
 | `--motion-duration-slow` | 500ms | 页面区块进入、Slide Up |
 
+#### Hero 专属动效（新增）
+
+| Token | 值 | 使用场景 |
+|---|---|---|
+| `--motion-duration-flow` | 25s | Flow 循环时长，感知不到起止 |
+| `--motion-duration-platform` | 10s | Platform 呼吸时长，用户不应主动察觉 |
+| `--motion-scale-platform` | 1.01 | Platform 缩放幅度，极微·仅保持生命感 |
+
 ---
 
-*最后更新：2026.06.30 | Sunrise Design System v1.0*
+*最后更新：2026.06.30 | Sunrise Design System v1.1*
