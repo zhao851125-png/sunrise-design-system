@@ -562,11 +562,114 @@
 </div>
 ```
 
+### 等宽规则
+
+按钮组中的**实体按钮**（有背景或边框）需等宽平分容器，提高移动端可点击区域。文字链因无背景，不参与等宽。
+
+#### 场景一：Hero CTA
+
+```html
+<!-- 桌面端（≥768px）：横排等宽 -->
+<div style="display: flex; gap: 12px;">
+  <button class="btn btn-primary" style="flex: 1;">立即申请 Demo</button>
+  <button class="btn" style="border: 1.5px solid rgba(255,255,255,0.2); background: transparent; flex: 1;">
+    了解产品
+  </button>
+</div>
+
+<!-- 移动端（<768px）：竖排全宽 -->
+<div style="display: flex; flex-direction: column; gap: 12px;">
+  <button class="btn btn-primary" style="width: 100%;">立即申请 Demo</button>
+  <button class="btn" style="border: 1.5px solid rgba(255,255,255,0.2); background: transparent; width: 100%;">
+    了解产品
+  </button>
+</div>
+```
+
+#### 场景二：Section CTA（带文字链例外）
+
+```html
+<!-- 桌面端：实体按钮等宽，文字链不参与 -->
+<div style="display: flex; gap: 12px; align-items: center;">
+  <button class="btn btn-primary" style="flex: 1;">立即申请 Demo</button>
+  <button class="btn btn-secondary" style="flex: 1;">了解产品</button>
+  <a>查看案例 →</a>
+  <!-- 注：文字链无背景无边框，不加 flex: 1 -->
+</div>
+
+<!-- 移动端：竖排时实体按钮全宽，文字链保持原宽 -->
+<div style="display: flex; flex-direction: column; gap: 10px;">
+  <button class="btn btn-primary" style="width: 100%;">立即申请 Demo</button>
+  <button class="btn btn-secondary" style="width: 100%;">了解产品</button>
+  <a>查看案例 →</a>
+</div>
+```
+
+#### 场景三：Modal 底部按钮组
+
+```html
+<!-- 桌面端：两个按钮等宽平分 -->
+<div style="display: flex; gap: 12px;">
+  <button class="btn" style="flex: 1;">取消</button>
+  <button class="btn btn-primary" style="flex: 1;">确认</button>
+</div>
+
+<!-- 移动端：竖排全宽 -->
+<div style="display: flex; flex-direction: column; gap: 10px;">
+  <button class="btn" style="width: 100%;">取消</button>
+  <button class="btn btn-primary" style="width: 100%;">确认</button>
+</div>
+```
+
+#### CSS 类名规范
+
+```css
+/* 按钮组容器 */
+.button-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* 按钮组中的实体按钮（桌面等宽） */
+.button-group > .btn:not([class*="text-link"]),
+.button-group > button {
+  flex: 1;
+}
+
+/* 移动端响应式 */
+@media (max-width: 768px) {
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .button-group > .btn:not([class*="text-link"]),
+  .button-group > button {
+    flex: none;
+    width: 100%;
+  }
+  
+  /* 文字链保持默认宽度 */
+  .button-group > a {
+    width: auto;
+  }
+}
+```
+
+#### 规则总结
+
+| 场景 | 桌面端 | 移动端 |
+|------|--------|--------|
+| **实体按钮** | `flex: 1`（等宽） | `width: 100%`（全宽） |
+| **文字链** | 不加 flex（原宽） | 不加 width（原宽） |
+| **容器** | `flex-direction: row`、`gap: 12px` | `flex-direction: column`、`gap: 10px` |
+
 ### 响应式换行规则
 
 | 断点 | 布局 | 规格 |
 |------|------|------|
-| **≥ 768px**（桌面） | 横排 | flex-direction: row · gap: 12px |
+| **≥ 768px**（桌面） | 横排等宽 | flex-direction: row · gap: 12px · 实体按钮 flex: 1 |
 | **< 768px**（移动） | 竖排全宽 | flex-direction: column · width: 100% · gap: 10px |
 
 ---
