@@ -1,15 +1,28 @@
 {
   "name": "sunrise-design-system",
   "version": "1.0.0",
-  "description": "Sunrise Design System - Token Documentation",
+  "description": "Sunrise Design System - Complete design tokens and atomic components for AI inference GPU chipset brand",
   "type": "module",
-  "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+  "keywords": [
+    "design-system",
+    "tokens",
+    "components",
+    "css-variables",
+    "design-specification"
+  ],
+  "author": "Sunrise Brand Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhao851125-png/sunrise-design-system"
   },
-  "devDependencies": {
-    "vitepress": "^1.0.0",
-    "vue": "^3.3.0"
+  "files": [
+    "src/tokens.json",
+    "docs/style.css",
+    "docs/components.md",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
